@@ -8,9 +8,11 @@
   <!-- Demo CSS -->
 	<link rel="stylesheet" href="css/demo.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="../flexslider.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen" />
 
 	<!-- Modernizr -->
   <script src="js/modernizr.js"></script>
+	<script src="../flex.modernizr.js"></script>
 
 </head>
 <body class="loading">
@@ -114,7 +116,9 @@
     });
     $(window).load(function(){
       $('.flexslider').flexslider({
-        animation: "slide",
+        displayType: "slideshow",
+	      animationIn: "bounceInRight",
+	      animationOut: "bounceOutLeft",
         start: function(slider){
           $('body').removeClass('loading');
         }
